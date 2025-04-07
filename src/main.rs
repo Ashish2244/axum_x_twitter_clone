@@ -3,6 +3,8 @@ use axum_x_twitter_clone::App;
 #[tokio::main]
 async fn main() {
     dotenvy::dotenv().ok();
+    println!("Current dir: {:?}", std::env::current_dir());
+
 
     let port = std::env::var("PORT")
         .expect("Missing env PORT")
